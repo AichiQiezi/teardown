@@ -53,6 +53,19 @@ node sims/build.mjs strandbeest-live
 | `sims/capture.mjs` | Renders the film frame by frame to a 60 fps mp4, or to review sheets of stills. |
 | `sfx/`, `run_sfx.py` | Procedural sound on the film's timeline, mastered to −14 LUFS. |
 
+## Gipsy Danger (fork addition)
+
+`sims/mech-*` is a Pacific Rim Jaeger built with this skill: Gipsy Danger wading through Hong Kong harbour at night in the rain. It walks and runs (the walk turns into a run past 7 m/s, with a flight phase between steps), punches with elbow rockets, fires the chest plasma beam and swings the GD6 chain sword. Every panel reads the solved leg: joint angles, the eight hydraulic cylinders' pressures, ground reactions and the reactor's draw.
+
+```
+node sims/build.mjs mech-live
+open teardown-out/dist/mech-live.html
+```
+
+Keys: `1`–`5` views, `←`/`→` throttle, `P` punch, `F` chest cannon, `S` chain sword, `W` drain the sea, `X` x-ray, `C` open the core, `T` ankle trace, `L` 中文 / English, space to pause.
+
+The hull is "Gipsy Danger" by [savounited](https://sketchfab.com/savounited) on Sketchfab, licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (`assets/gipsy.glb`); `sims/mech-shared/gipsy-glb.js` cuts it into the rig's rigid segments. Gipsy Danger and Pacific Rim belong to Legendary Pictures and Warner Bros.; this is an unofficial fan project, not affiliated with or endorsed by them.
+
 ## Credits
 
 Built on [whaleyxbt/claude-motion](https://github.com/whaleyxbt/claude-motion) (MIT): the runtime, frame capture, sound engine and review rules come from there. Recorded samples are CC0 from Freesound, prepared by [Barty-Bart/motion-graphics](https://github.com/Barty-Bart/motion-graphics); sources in `sfx/samples/SOURCES.md`.
